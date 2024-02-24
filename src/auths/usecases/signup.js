@@ -41,7 +41,7 @@ export const addUser = async (req, res, next) => {
         const params = {
           to: email,
           subject: "Verify Email For FutsalPro Registration",
-          html: `<h1>Welcome and thank you for registering with TheFutsalPro! We need to Verify your email to complete the registration process. Please Click on the link below to Verify your account.</h1> <br/> <a href="http://localhost:3000/verify/${verificationKey}">Click Here</a>`,
+          html: `<h1>Welcome and thank you for registering with TheFutsalPro! We need to Verify your email to complete the registration process. Please Click on the link below to Verify your account.</h1> <br/> <a href="https://thefutsalpro.netlify.app/verify/${verificationKey}">Click Here</a>`,
         };
         await notify(params);
         return { message: "User Register Sucessfull" };
@@ -102,7 +102,7 @@ export const forgetPassword = async ({ email }, res, next) => {
           const params = {
             to: email,
             subject: "Verify Email For Reset Password",
-            html: `<h1>"Please click on the link below to reset your password."</h1> <br/> <a href="http://localhost:3000/forget-password/verify/${verificationKey}">Reset Password</a>`,
+            html: `<h1>"Please click on the link below to reset your password."</h1> <br/> <a href="https://thefutsalpro.netlify.app/forget-password/verify/${verificationKey}">Reset Password</a>`,
           };
           await notify(params);
         }
