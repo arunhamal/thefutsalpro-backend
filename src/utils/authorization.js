@@ -33,6 +33,7 @@ export default async (req, res, next) => {
       }
       // if (!userInfo.is_owner) {
       //     if (req.path.includes('/web')) {
+        
       //         next();
       //     } else {
       //         res.status(401).json({ success: false, message: 'You are not authorized to perform this operation.' });
