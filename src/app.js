@@ -15,7 +15,7 @@ dotenv.config()
 app.use(bodyParser.json());
 app.use(cors());
 //const mongoDB = 'mongodb://127.0.0.1:27017/futsalbooking'
-const mongoDB = 'mongodb+srv://thefutsalpro:PfjbS6IalZTpfo4O@cluster0.voo7tlv.mongodb.net/'
+const mongoDB = 'mongodb+srv://thefutsalpro:PfjbS6IalZTpfo4O@cluster0.voo7tlv.mongodb.net/?retryWrites=true&w=majority'
 
 const storage = multer.diskStorage({
     destination: (req, file, callback) => {
