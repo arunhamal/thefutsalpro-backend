@@ -17,7 +17,7 @@ export default async (req, res, next) => {
     ) {
       next();
     } else {
-      const token = req.headers.authorization.split(" ")[1];
+      const token = req.headers.authorization.split(" ")?.[1];
       const userInfo = jwt.verify(token, "ECOMMERCE_TEST");
       if (userInfo.is_owner) {
         if (!req.path.includes("/web")) {
