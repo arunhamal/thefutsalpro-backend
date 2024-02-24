@@ -1,7 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 
-const mongoDB = 'mongodb://localhost:27017/futsalbooking'
+const mongoDB = 'mongodb+srv://thefutsalpro:PfjbS6IalZTpfo4O@cluster0.voo7tlv.mongodb.net/?retryWrites=true&w=majority'
 
 export const mongodbConnection = mongoose.connect(mongoDB, (err) => {
     if (err) {
