@@ -102,7 +102,7 @@ export const forgetPassword = async ({ email }, res, next) => {
           const params = {
             to: email,
             subject: "Verify Email For Reset Password",
-            html: `<h1>"Please click on the link below to reset your password."</h1> <br/> <a href="https://thefutsalpro.netlify.app/forget-password/verify/${verificationKey}">Reset Password</a>`,
+            html: `<h1>Please click on the link below to reset your password.</h1> <br/> <a href="https://thefutsalpro.netlify.app/forget-password/verify/${verificationKey}">Reset Password</a>`,
           };
           await notify(params);
         }
