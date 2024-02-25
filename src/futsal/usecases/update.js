@@ -74,7 +74,7 @@ export const updateBookingDetails = async (payload, id, next) => {
       user_id: user_id,
       booking_date: booking_date,
     });
-    const futsalInfo = await futsalModel.find().where({ _id: futsal_id });
+    const futsalInfo = await futsalModel.find().where({ futsal_id: futsal_id });
     const rates = futsalInfo?.[0]?.time_rate?.filter(
       (item) => item?.timing === timing
     );
